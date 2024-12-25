@@ -1,0 +1,24 @@
+//< " ПЕРЕМЕННЫЕ " >=============================================================================================================>//
+
+// ОБЩИЕ НАСТРОЙКИ СТРАНИЦЫ
+$minWidth: 320;
+$maxWidth: 1600;
+$maxWidthContainer: 1410;
+$containerPadding: 30;
+
+// СТАНДАРТНЫЕ НАСТРОЙКИ СТРАНИЦЫ
+$fontMontserrat: Montserrat;
+$fontOpenSans: OpenSans;
+$fontMavenPro: MavenPro;
+
+:root {
+  --gray: #8d8d8d;
+  --red: #d40000;
+  --orange: #ffbb38;
+  --white: #fff;
+  --light-gray: #dbdbdb;
+  --dark: #222222;
+  --green: #00aa4e;
+  --orange-2: #f57702;
+  --green: #00aa4e;
+}
