@@ -171,7 +171,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 15px;
+    gap: 0px;
+    flex-wrap: wrap;
   }
   &__price {
     font-weight: 700;
@@ -184,6 +185,9 @@
     gap: 6.5px;
   }
   &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 2px solid transparent;
     border-radius: 10px;
     width: 50px;
@@ -226,6 +230,7 @@
   }
 
   @media (max-width: 992px) {
+    padding: 15px;
     &__status,
     &__name {
       font-size: 16px;
@@ -245,10 +250,19 @@
       gap: 9px;
     }
     &__button {
+      border-width: 1px;
+      border-radius: 7px;
+      width: 35px;
+      height: 35px;
       i {
         --size: 20px;
       }
     }
+    &__rate{
+  i{
+    --size: 20px;
+  }
+}
   }
 
   @media (max-width: 680px) {
@@ -274,8 +288,16 @@
       gap: 2.5px;
     }
     &__button {
+      border-radius: 4px;
+      width: 25px;
+      height: 25px;
       i {
         --size: 15px;
+      }
+    }
+    &__rate{
+      i{
+        --size: 12px;
       }
     }
   }
