@@ -104,9 +104,11 @@
     grid-template-areas:
       'big1 small2'
       'big1 small3';
-    gap: 30px;
+    // gap: 30px;
     align-items: center;
-    align-content: center;
+    align-content: space-between;
+    justify-content: space-between;
+
 
     @media (max-width: 992px) {
       grid-template-rows: 226px 226px;
