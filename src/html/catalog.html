@@ -12,13 +12,9 @@
     <div class="content">
       @@include("components/header.html")
       <main class="page">
-        @@include("components/main.html")
-        @@include("components/catalog.html", {className: "tablet"})
-        @@include("components/products.html")
-        @@include("components/about.html")
-        @@include("components/cooperation.html")
-        @@include("components/order.html")
-        @@include("components/reviews.html")
+        @@include("components/breadcrumbs.html", {path: ["Каталог"]})
+        @@include("components/catalog.html")
+
       </main>
     </div>
     @@include("components/footer.html")
