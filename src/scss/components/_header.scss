@@ -1,1 +1,170 @@
 //< " ФАЙЛ СТИЛЕЙ ХЕДЕРА " >=============================================================================================================>//
+
+.header {
+  &__body {
+    justify-content: space-between;
+    display: flex;
+    gap: 22px;
+    padding: 35px 0;
+    align-items: center;
+    border-bottom: 0.5px solid var(--gray);
+    position: relative;
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 176px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    background: transparent;
+    span {
+      transition: all 0.3s ease 0s;
+    }
+
+    @media (any-hover: hover) {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        span {
+          color: var(--orange-2);
+        }
+      }
+    }
+  }
+
+  &__dropdown {
+    &.active {
+      & .dropdown-open {
+        color: var(--orange-2);
+      }
+    }
+  }
+
+  &__catalog {
+    gap: 10px;
+
+    i {
+      color: var(--red);
+      --size: 35px;
+    }
+  }
+
+  &__cooperation {
+    color: var(--red);
+    gap: 5px;
+
+    i {
+      color: var(--red);
+      --size: 30px;
+    }
+  }
+
+  &__client {
+    color: var(--gray);
+    gap: 5px;
+
+    i {
+      --size: 20px;
+    }
+
+    @media (any-hover: hover) {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        color: var(--orange-2);
+      }
+    }
+  }
+
+  &__button-icon {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: var(--dark);
+
+    i {
+      --size: 35px;
+    }
+
+    @media (any-hover: hover) {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        color: var(--orange-2);
+      }
+    }
+  }
+
+  @media (max-width: 1400px) {
+    &__button-icon:last-child {
+      display: none;
+    }
+  }
+  @media (max-width: 1350px) {
+    &__button-icon:nth-last-child(2) {
+      display: none;
+    }
+  }
+  @media (max-width: 1270px) {
+    &__button-icon:nth-last-child(3) {
+      display: none;
+    }
+  }
+  @media (max-width: 1230px) {
+    &__button-icon:nth-last-child(4) {
+      display: none;
+    }
+  }
+  @media (max-width: 1170px) {
+    &__catalog {
+      display: none;
+    }
+  }
+  @media (max-width: 992px) {
+    &__body {
+      border-bottom: 0;
+    }
+  }
+  @media (max-width: 680px) {
+    &__logo {
+      max-width: 122px;
+    }
+    &__button-icon {
+      i {
+        --size: 25px;
+      }
+    }
+    &__client {
+      i {
+        --size: 15px;
+      }
+    }
+    &__button-chat {
+      order: 2;
+    }
+    &__button-phone {
+      order: 3;
+    }
+  }
+  @media (max-width: 480px) {
+    &__body {
+      padding: 15px 0;
+      gap: 10px;
+    }
+    &__cooperation {
+      display: none;
+    }
+  }
+}

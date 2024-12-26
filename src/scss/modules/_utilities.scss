@@ -1,0 +1,154 @@
+.h1-title {
+  font-family: $fontMontserrat;
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  line-height: 43.9px;
+}
+.h2-title {
+  font-family: $fontMontserrat;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  line-height: 49.3px;
+}
+.h3-title {
+  font-family: $fontMontserrat;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  line-height: 24.4px;
+}
+.main-text-semibold {
+  font-family: $fontMontserrat;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  line-height: 24.4px;
+}
+.main-text {
+  font-family: $fontMontserrat;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  line-height: 24.4px;
+}
+.sub-text-semibold {
+  font-family: $fontMontserrat;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  line-height: 19.5px;
+}
+.sub-text {
+  font-family: $fontMontserrat;
+  font-weight: 500;
+  font-size: 8px;
+  letter-spacing: -0.01em;
+  line-height: 9.8px;
+}
+
+@media (max-width: 680.97px) {
+  .h1-title {
+    font-family: $fontMontserrat;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    line-height: 24.4px;
+  }
+  .h2-title {
+    font-family: $fontMontserrat;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    line-height: 17.1px;
+  }
+  .main-text-semibold {
+    font-family: $fontMontserrat;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: -0.01em;
+    line-height: 12.2px;
+  }
+  .main-text {
+    font-family: $fontMontserrat;
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: -0.01em;
+    line-height: 12.2px;
+  }
+  .sub-text-semibold {
+    font-family: $fontMontserrat;
+    font-weight: 600;
+    font-size: 8px;
+    letter-spacing: -0.01em;
+    line-height: 9.8px;
+  }
+  .sub-text {
+    font-family: $fontMontserrat;
+    font-weight: 500;
+    font-size: 8px;
+    letter-spacing: -0.01em;
+    line-height: 9.8px;
+  }
+}
+
+.text-orange {
+  color: var(--orange);
+}
+
+.text-orange-2 {
+  color: var(--orange-2);
+}
+
+.text-red {
+  color: var(--red);
+}
+
+.text-green {
+  color: var(--green);
+}
+
+.text-gray {
+  color: var(--gray);
+}
+
+.text-light-gray {
+  color: var(--light-gray);
+}
+
+.text-dark {
+  color: var(--dark);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+@media (max-width: 680px) {
+  .not-mob {
+    display: none;
+  }
+}
+
+@media (min-width: 679.92px) {
+  .mob {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .not-table {
+    display: none;
+  }
+}
+@media (min-width: 991.92px) {
+  .table {
+    display: none;
+  }
+}

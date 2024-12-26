@@ -13,12 +13,17 @@ $fontMavenPro: MavenPro;
 
 :root {
   --gray: #8d8d8d;
-  --red: #d40000;
-  --orange: #ffbb38;
+  // --orange-2: #ffbb38;
   --white: #fff;
   --light-gray: #dbdbdb;
   --dark: #222222;
-  --green: #00aa4e;
+  --orange: #ffbb38;
   --orange-2: #f57702;
-  --green: #00aa4e;
+  --red: #d40000;
+  --green: #1c9453;
+
+  --shadow: 0 7px 20px 0 rgba(127, 127, 127, 0.2);
+  --shadow-inset: inset 0 5px 10px 0 rgba(75, 75, 75, 0.25);
+  --shadow-hover: 0 7px 30px 0 rgba(245, 119, 2, 0.2);
+  --shadow-active: 0 7px 20px 0 rgba(127, 127, 127, 0.2), inset 4px 4px 7px 4px rgba(0, 0, 0, 0.1);
 }

@@ -1,6 +1,16 @@
-new Swiper(".swiper", {
+const mainSlider = new Swiper('.main__banners-slider', {
   slidesPerView: 1,
-  spaceBetween: 15,
+  spaceBetween: 30,
+  grabCursor: true,
+  loop: true,
+  speed: 800,
+
+  pagination: { el: '.main__banners-pagination' },
+});
+
+const productsSlider = new Swiper('.products__slider', {
+  slidesPerView: 4,
+  spaceBetween: 30,
   grabCursor: true,
   loop: true,
   speed: 800,
@@ -9,13 +19,10 @@ new Swiper(".swiper", {
     delay: 3500,
   },
 
+  pagination: { el: '.products__pagination' },
+
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.products__prev',
+    prevEl: '.products__next',
   },
-
-  breakpoints: {
-    767.8: {},
-  }
 });
-
