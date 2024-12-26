@@ -53,6 +53,14 @@ a {
   padding: 0px #{calc($containerPadding / 2) + px};
   margin: 0px auto;
   max-width: $maxWidthContainer + px;
+
+  @media(max-width: 992px){
+    padding: 0 48px;
+  }
+
+  @media(max-width: 680px){
+    padding: 0 15px;
+  }
 }
 
 //< " FILES COMPONENTS " >=============================================================================================================>//
@@ -60,6 +68,8 @@ a {
 @import "./components/_footer";
 @import "./components/_main";
 @import "./components/_products";
+@import "./components/_about";
+@import "./components/_cooperation";
 // @import "./components/_preloader";
 
 //< " MAIN BLOCK " >=============================================================================================================>//

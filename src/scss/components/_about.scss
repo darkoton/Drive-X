@@ -1,0 +1,105 @@
+.about{
+  margin-bottom: 120px;
+
+  &__wrapper{
+    position: relative;
+  }
+
+  &__decor{
+    position: absolute;
+    z-index: -1;
+    bottom: -30%;
+    right: 0;
+    width: 100%;
+    max-width: 277px;
+  }
+
+  &__body{
+    display: flex;
+    gap: 30px;
+  }
+  &__col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+    width: 50%;
+  }
+
+  &__img{
+    position: relative;
+    width: 100%;
+  }
+
+  &__light{
+    position: absolute;
+    width: 100%;
+    max-width: 746px;
+    top: 38%;
+    left: -13%;
+  }
+
+  &__car{
+    width: 100%;
+  }
+
+  &__text{
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    line-height: 24px;
+    & .text-red{
+      font-weight: 600;
+    }
+  }
+
+  &__title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  &__button{
+    width: 100%;
+    max-width: 500px
+  }
+
+  @media(max-width: 992px){
+    margin-bottom: 80px;
+
+    &__body{
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+
+    &__col{
+      width: 100%;
+      align-items: center;
+    }
+  }
+
+  @media(max-width: 680px){
+    margin-bottom: 40px;
+
+    &__col{
+      gap: 20px;
+    }
+
+    &__title{
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &__text{
+      font-size: 10px;
+      line-height: 12px;
+    }
+    &__button{
+      padding: 19px 0;
+    }
+  }
+
+}
