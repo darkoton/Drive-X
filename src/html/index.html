@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@@include("components/head.html", {
-"title": "Gulp-template"
-})
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+
+  <style>
+    body {
+      background: #222;
+    }
+
+    nav {
+      margin: 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    a {
+      color: #fff;
+      font-size: 20px;
+    }
+  </style>
+</head>
 
 <body>
-  <!-- @@include("components/preloader.html") -->
-
-  <div class="wrapper">
-    <div class="content">
-      @@include("components/header.html")
-      <main class="page">
-        @@include("components/main.html")
-        @@include("components/catalog.html", {className: "tablet"})
-        @@include("components/products.html")
-        @@include("components/about.html")
-        @@include("components/cooperation.html")
-        @@include("components/order.html")
-        @@include("components/reviews.html")
-      </main>
-    </div>
-    @@include("components/footer.html")
-  </div>
+  <nav>
+    <a href="./home.html">Головна</a>
+    <a href="./catalog.html">Каталог</a>
+  </nav>
 </body>
 
 </html>
