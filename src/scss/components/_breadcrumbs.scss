@@ -9,7 +9,7 @@
     align-items: center;
   }
   &__home{
-    color: var(--gray);
+    color: var(--dark);
     i{
       --size: 20px;
     }
@@ -20,10 +20,14 @@
     font-size: 20px;
     line-height: 24px;
     letter-spacing: -0.01em;
-    color: var(--gray);
+    color: var(--dark);
     display: flex;
     gap: 8px;
     align-items: center;
+
+    &.active{
+      color: var(--gray);
+    }
 
     &:before{
       content: "";

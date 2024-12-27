@@ -66,9 +66,9 @@
 
   &__banners-slider-body {
     overflow: hidden;
-    @media (min-width: 992px) {
-      pointer-events: none;
-    }
+    // @media (min-width: 992px) {
+    //   pointer-events: none;
+    // }
   }
   &__banners-slider {
     height: 100%;
