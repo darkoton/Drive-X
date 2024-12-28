@@ -55,8 +55,6 @@ if (buttonOpenSidebar && sidebarFilters) {
 const filters = document.querySelectorAll('.categories__filter');
 
 filters.forEach(filter => {
-  console.log(filter.innerHTML);
-
   const button = filter.querySelector('button');
 
   if (button) {
