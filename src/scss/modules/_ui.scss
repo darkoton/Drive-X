@@ -8,8 +8,16 @@
     gap: 15px;
     color: var(--gray);
 
-    i{
+    i {
       --size: 20px;
+    }
+
+    @media (max-width: 680px) {
+      gap: 5px;
+
+      i {
+        --size: 12px;
+      }
     }
   }
 
@@ -46,7 +54,7 @@
       text-align: left;
       color: #222;
 
-      @media (max-width: 992px) {
+      @media (max-width: 680px) {
         font-size: 10px;
       }
 
@@ -66,8 +74,8 @@
       opacity: 1;
     }
 
-    & .dropdown-open{
-      i{
+    & .dropdown-open {
+      i {
         transform: scaleY(-1);
       }
     }
@@ -245,6 +253,8 @@
 
   @media (max-width: 992px) {
     padding: 15px;
+    border-radius: 15px;
+
     &__status,
     &__name {
       font-size: 16px;
@@ -272,14 +282,21 @@
         --size: 20px;
       }
     }
-    &__rate{
-  i{
-    --size: 20px;
-  }
-}
+    &__rate {
+      i {
+        --size: 20px;
+      }
+    }
   }
 
   @media (max-width: 680px) {
+    padding: 9px;
+    border-radius: 10px;
+
+    &__status {
+      padding-right: 6px;
+    }
+
     &__status,
     &__name {
       font-size: 8px;
@@ -309,15 +326,15 @@
         --size: 15px;
       }
     }
-    &__rate{
-      i{
+    &__rate {
+      i {
         --size: 12px;
       }
     }
   }
 }
 
-.button{
+.button {
   --bg: var(--white);
   --bg-hover: var(--white);
   --text: var(--dark);
@@ -332,44 +349,44 @@
   border-radius: 20px;
   text-transform: uppercase;
 
-  &.red{
+  &.red {
     --bg: var(--red);
     --bg-hover: var(--red-hover);
     --text: var(--white);
   }
 
-  &.orange{
+  &.orange {
     --bg: var(--orange);
     --bg-hover: var(--orange-hover);
     --text: var(--white);
   }
 
-  @media(any-hover:hover){
+  @media (any-hover: hover) {
     cursor: pointer;
     transition: all 0.2s ease 0s;
 
-    &:hover{
+    &:hover {
       background-color: var(--bg-hover);
       border-color: var(--bg-hover);
     }
   }
 
-  @media(max-width: 992px){
+  @media (max-width: 992px) {
     background-color: var(--white);
     color: var(--red);
 
-    @media(any-hover:hover){
+    @media (any-hover: hover) {
       cursor: pointer;
       transition: all 0.2s ease 0s;
 
-      &:hover{
+      &:hover {
         border-color: var(--bg);
         background-color: var(--bg);
         color: var(--text);
       }
     }
   }
-  @media(max-width: 680px){
+  @media (max-width: 680px) {
     font-weight: 700;
     font-size: 10px;
     letter-spacing: -0.01em;
@@ -378,26 +395,24 @@
     border-radius: 10px;
   }
 
-
-
-  &.outlined{
+  &.outlined {
     background-color: transparent;
     color: var(--bg);
 
-    @media(any-hover:hover){
+    @media (any-hover: hover) {
       cursor: pointer;
       transition: all 0.2s ease 0s;
 
-      &:hover{
+      &:hover {
         border-color: var(--bg);
         background-color: var(--bg);
         color: var(--text);
-        }
+      }
     }
   }
 }
 
-.title{
+.title {
   font-weight: 700;
   font-size: 36px;
   line-height: 43px;
@@ -405,24 +420,24 @@
   text-transform: uppercase;
   color: var(--gray);
 
-  @media(max-width: 680px){
-      font-size: 20px;
-      line-height: 24px;
+  @media (max-width: 680px) {
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 
-@supports(-webkit-appearance: none) or (-moz-appearance: none) {
-  input[type='checkbox'],
-  input[type='radio'] {
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type="checkbox"],
+  input[type="radio"] {
     --active: var(--white);
     --active-inner: var(--red);
-    --focus: 2px rgba(39, 94, 254, .3);
+    --focus: 2px rgba(39, 94, 254, 0.3);
     --border: var(--red);
     --border-active: var(--red);
     --border-hover: var(--red);
     --background: #fff;
-    --disabled: #F6F8FF;
-    --disabled-inner: #E1E6F9;
+    --disabled: #f6f8ff;
+    --disabled-inner: #e1e6f9;
     -webkit-appearance: none;
     -moz-appearance: none;
     height: 25px;
@@ -434,26 +449,36 @@
     cursor: pointer;
     border: 1px solid var(--bc, var(--border));
     background: var(--b, var(--background));
-    transition: background .3s, border-color .3s, box-shadow .2s;
+    transition:
+      background 0.3s,
+      border-color 0.3s,
+      box-shadow 0.2s;
+
+    @media (max-width: 680px) {
+      height: 16px;
+    }
+
     &:after {
-      content: '';
+      content: "";
       display: block;
       left: 0;
       top: 0;
       position: absolute;
-      transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
+      transition:
+        transform var(--d-t, 0.3s) var(--d-t-e, ease),
+        opacity var(--d-o, 0.2s);
     }
     &:checked {
       --b: var(--active);
       --bc: var(--border-active);
-      --d-o: .3s;
-      --d-t: .6s;
-      --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+      --d-o: 0.3s;
+      --d-t: 0.6s;
+      --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
     }
     &:disabled {
       --b: var(--disabled);
       cursor: not-allowed;
-      opacity: .9;
+      opacity: 0.9;
       &:checked {
         --b: var(--disabled-inner);
         --bc: var(--border);
@@ -474,11 +499,21 @@
     }
     &:not(.switch) {
       width: 25px;
+
       &:after {
         opacity: var(--o, 0);
       }
       &:checked {
         --o: 1;
+      }
+
+      @media (max-width: 680px) {
+        width: 16px;
+
+        &[type="radio"]:after {
+          width: 8px;
+          height: 8px;
+        }
       }
     }
     & + label {
@@ -490,14 +525,14 @@
       cursor: pointer;
       margin-left: 4px;
 
-      @media(max-width: 680px){
+      @media (max-width: 680px) {
         font-size: 10px;
       }
     }
   }
-  input[type='checkbox'] {
+  input[type="checkbox"] {
     &:not(.switch) {
-      border-radius: 7px;
+      border-radius: 5px;
       &:after {
         width: 6px;
         height: 13px;
@@ -507,6 +542,18 @@
         left: 9px;
         top: 4px;
         transform: rotate(var(--r, 20deg));
+      }
+
+      @media (max-width: 680px) {
+        border-radius: 3px;
+
+        &::after {
+          top: 1px;
+          left: 5px;
+          border-width: 1px;
+          width: 4px;
+          height: 10px;
+        }
       }
       &:checked {
         --r: 43deg;
@@ -531,13 +578,13 @@
       &:disabled {
         &:not(:checked) {
           &:after {
-            opacity: .6;
+            opacity: 0.6;
           }
         }
       }
     }
   }
-  input[type='radio'] {
+  input[type="radio"] {
     border-radius: 50%;
     &:after {
       width: 13px;
@@ -551,7 +598,84 @@
       transform: translate(-50%, -50%);
     }
     &:checked {
-      --s: .5;
+      --s: 0.5;
     }
+  }
+}
+
+.slider-range {
+  position: relative;
+  width: 100%;
+  height: 15px;
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    outline: none;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    pointer-events: none;
+  }
+  .slider-track {
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+  }
+  input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    height: 5px;
+  }
+  input[type="range"]::-moz-range-track {
+    -moz-appearance: none;
+    height: 5px;
+  }
+  input[type="range"]::-ms-track {
+    appearance: none;
+    height: 5px;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    background-color: var(--white);
+    cursor: pointer;
+    margin-top: -5px;
+    pointer-events: auto;
+    border-radius: 50%;
+    border: 1px solid var(--red);
+  }
+  input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--white);
+    pointer-events: auto;
+    border: none;
+  }
+  input[type="range"]::-ms-thumb {
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--white);
+    pointer-events: auto;
+  }
+  input[type="range"]:active::-webkit-slider-thumb,
+  input[type="range"]:active::-moz-range-thumb,
+  input[type="range"]:active::-ms-thumb {
+    background-color: var(--red);
+    // border: 1px solid #3264fe;
   }
 }

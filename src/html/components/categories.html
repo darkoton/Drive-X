@@ -2,87 +2,100 @@
   <div class="categories__wrapper">
     <div class="categories__cpntainer _container">
       <div class="categories__body">
+        <div class="categories__breadcrumbs">
+          @@include("./breadcrumbs.html", {path: ["Каталог", "Категорії"]})
+
+          <button class="categories__filter-open tablet">
+            <span>Фільтри</span>
+            <i class="icon-filter"></i>
+          </button>
+        </div>
+
         <div class="categories__top">
           <h2 class="categories__title title h2-title">
             Акустичні системи
           </h2>
 
           <div class="categories__actions">
-              <button class="categories__sort main-text">
-                <i class="icon-sort"></i>
+            <button class="categories__sort main-text">
+              <i class="icon-sort"></i>
 
-                <span>Сортувати</span>
+              <span>Сортувати</span>
+            </button>
+            <div class="categories__dropdown dropdown">
+
+              <button class="categories__button main-text dropdown-open">
+                <span>По рейтингу</span>
+                <i class="icon-arrow-down"></i>
               </button>
-              <div class="categories__dropdown dropdown">
 
-                <button class="categories__button main-text dropdown-open">
-                  <span>По рейтингу</span>
-                  <i class="icon-arrow-down"></i>
-                </button>
-
-                <ul class="dropdown-list">
-                  <li data-value="rate">
-                    <span>
-                      По рейтингу
-                    </span>
-                  </li>
-                  <li data-value="date">
-                    <span>
-                      По даті
-                    </span>
-                  </li>
-                  <li data-value="review">
-                    <span>
-                      По відгукам
-                    </span>
-                  </li>
-                  <li data-value="price">
-                    <span>
-                      По ціні
-                    </span>
-                  </li>
-                  <li data-value="has">
-                    <span>
-                      По наявності
-                    </span>
-                  </li>
-                </ul>
-              </div>
+              <ul class="dropdown-list">
+                <li data-value="rate">
+                  <span>
+                    По рейтингу
+                  </span>
+                </li>
+                <li data-value="date">
+                  <span>
+                    По даті
+                  </span>
+                </li>
+                <li data-value="review">
+                  <span>
+                    По відгукам
+                  </span>
+                </li>
+                <li data-value="price">
+                  <span>
+                    По ціні
+                  </span>
+                </li>
+                <li data-value="has">
+                  <span>
+                    По наявності
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="categories__filters-list">
-          <span class="categories__filter categories__result main-text">
+          <span class="categories__filter-result categories__result-search main-text">
             Результатів: <span class="main-text-semibold">56</span>
           </span>
 
           <span class="categories__filter main-text">
             <span>Скинути</span>
-            <i class="icon-x"></i>
-          </span>
+            <button data-all><i class="icon-x"></i></button> </span>
           <span class="categories__filter main-text">
             <span class="categories__filter-name">Ціна:</span>
             <span class="categories__filter-value">1000 - 2000</span>
-            <i class="icon-x"></i>
+            <button><i class="icon-x"></i></button>
           </span>
           <span class="categories__filter main-text">
             <span class="categories__filter-name">Номінальна потужність:</span>
             <span class="categories__filter-value">100</span>
-            <i class="icon-x"></i>
-          </span>
+            <button><i class="icon-x"></i></button> </span>
         </div>
+
         <div class="categories__main">
-          <div class="categories__sidebar">
+          <div class="categories__sidebar-backward tablet sidebar-close"></div>
+          <div class="categories__sidebar" data-spollers>
+            <button class="categories__sidebar-close tablet sidebar-close">
+              <i class="icon-x"></i>
+            </button>
             <div class="categories__sidebar-section">
               <h3 class="categories__sidebar-title">
                 <i class="icon-catalog"></i> Каталог:
               </h3>
 
-              <div class="categories__sidebar-list" data-spollers>
+              <div class="categories__sidebar-list">
                 <a href="#" class="categories__sidebar-li">LED лінзи</a>
                 <a href="#" class="categories__sidebar-li">LED лампи головного світла</a>
                 <div class="categories__sidebar-li">
                   <div class="categories__sidebar-spoller">
-                    <button class="categories__sidebar-spoller-button" data-spoller>Фари робочого світла та DRL <i class="icon-arrow-down"></i></button>
+                    <button class="categories__sidebar-spoller-button" data-spoller>Фари робочого світла та DRL <i
+                        class="icon-arrow-down"></i></button>
                     <div>
                       <ul class="categories__sidebar-spoller-list">
                         <li>Ходові вогні</li>
@@ -95,7 +108,7 @@
                 <a href="#" class="categories__sidebar-li">Ксенонове світло</a>
                 <a href="#" class="categories__sidebar-li">Ксенонові лінзи</a>
                 <a href="#" class="categories__sidebar-li">LED лампи додаткового світла</a>
-                </div>
+              </div>
             </div>
 
             <div class="categories__sidebar-section">
@@ -131,6 +144,27 @@
               </div>
             </div>
 
+            <div class="categories__sidebar-section" slider-body>
+              <h3 class="categories__sidebar-title">
+                Ціна:
+              </h3>
+
+              <div class="categories__range-fields">
+                <input placeholder="20.00" max="9998" min="1" class="categories__range-field field-price-1" id=""
+                  type="number">
+                <div class="line"></div>
+                <input placeholder="5000.00" max="9999" min="1" class="categories__range-field field-price-2"
+                  type="number">
+              </div>
+
+              <div class="categories__range-slider slider-range">
+                <div class="slider-track"></div>
+                <input type="range" min="0" max="10000" value="30" id="slider-1">
+                <input type="range" min="0" max="10000" value="4000" id="slider-2">
+              </div>
+
+            </div>
+
             <div class="categories__sidebar-section">
               <h3 class="categories__sidebar-title">
                 Цоколь:
@@ -138,40 +172,409 @@
 
               <div class="categories__sidebar-list">
                 <div class="categories__sidebar-li">
-                  <input type="checkbox"  id="growPrice" />
-                  <label for="growPrice">
+                  <input type="checkbox" id="9012" />
+                  <label for="9012">
                     9012
                     <span class="sub-value text-gray">5</span>
-                   </label>
+                  </label>
                 </div>
                 <div class="categories__sidebar-li">
-                  <input type="checkbox"  id="fallPrice" />
-                  <label for="fallPrice">
-                     D2
-                     <span class="sub-value text-gray">1</span>
-                   </label>
+                  <input type="checkbox" id="D2" />
+                  <label for="D2">
+                    D2
+                    <span class="sub-value text-gray">1</span>
+                  </label>
                 </div>
                 <div class="categories__sidebar-li">
-                  <input type="checkbox"  id="name" />
-                  <label for="name"> D2S </label>
+                  <input type="checkbox" id="D2S" />
+                  <label for="D2S">
+                    D2S
+                    <span class="sub-value text-gray">1</span>
+                  </label>
                 </div>
                 <div class="categories__sidebar-li">
-                  <input type="checkbox"  id="power" />
-                  <label for="power"> Потужність </label>
+                  <input type="checkbox" id="H1" />
+                  <label for="H1">
+                    H1
+                    <span class="sub-value text-gray">12</span>
+                  </label>
                 </div>
                 <div class="categories__sidebar-li">
-                  <input type="checkbox"  id="potik" />
-                  <label for="potik"> Світловий потік </label>
+                  <input type="checkbox" id="H11" />
+                  <label for="H11">
+                    H11
+                    <span class="sub-value text-gray">16</span>
+                  </label>
+                </div>
+
+                <div class="categories__sidebar-li">
+                  <div class="categories__sidebar-spoller reverse">
+                    <button class="categories__sidebar-spoller-button" data-spoller>
+                      <i class="icon-arrow-down"></i>
+                      Ще 18
+                    </button>
+                    <div>
+                      <ul class="categories__sidebar-list">
+                        <div class="categories__sidebar-li">
+                          <input type="checkbox" id="H112" />
+                          <label for="H112"> H11 </label>
+                          <span class="sub-value text-gray">16</span>
+                        </div>
+                        <div class="categories__sidebar-li">
+                          <input type="checkbox" id="H113" />
+                          <label for="H113"> H11 </label>
+                          <span class="sub-value text-gray">16</span>
+                        </div>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="categories__sidebar-section">
+              <h3 class="categories__sidebar-title">
+                Наявність CAN:
+              </h3>
+
+              <div class="categories__sidebar-list">
+                <div class="categories__sidebar-li">
+                  <input type="checkbox" id="no" />
+                  <label for="no">
+                    Нi
+                    <span class="sub-value text-gray">77</span>
+                  </label>
                 </div>
                 <div class="categories__sidebar-li">
-                  <input type="checkbox"  id="temp" />
-                  <label for="temp"> Колірна температура </label>
+                  <input type="checkbox" id="yes" />
+                  <label for="yes">
+                    Так
+                    <span class="sub-value text-gray">39</span>
+                  </label>
                 </div>
               </div>
             </div>
           </div>
           <div class="categories__result">
+            <div class="categories__grid">
+              <div class="card">
+                <span class="card__status">В наявності</span>
 
+                <img src="./img/products/image-1.png" alt="" class="card__img">
+                <div class="card__info">
+                  <p class="card__name">
+                    GT-693
+                  </p>
+
+                  <div class="card__bottom">
+                    <div class="card__rate">
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-light-gray"></i>
+                    </div>
+
+                    <div class="card__actions">
+                      <p class="card__price">1 706 грн.</p>
+
+                      <div class="card__buttons">
+                        <button class="card__button card__button-heart">
+                          <i class="icon-heart"></i>
+                        </button>
+                        <button class="card__button card__button-basket">
+                          <i class="icon-bag"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <span class="card__status">В наявності</span>
+
+                <img src="./img/products/image-1.png" alt="" class="card__img">
+                <div class="card__info">
+                  <p class="card__name">
+                    GT-693
+                  </p>
+
+                  <div class="card__bottom">
+                    <div class="card__rate">
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-light-gray"></i>
+                    </div>
+
+                    <div class="card__actions">
+                      <p class="card__price">1 706 грн.</p>
+
+                      <div class="card__buttons">
+                        <button class="card__button card__button-heart">
+                          <i class="icon-heart"></i>
+                        </button>
+                        <button class="card__button card__button-basket">
+                          <i class="icon-bag"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <span class="card__status">В наявності</span>
+
+                <img src="./img/products/image-1.png" alt="" class="card__img">
+                <div class="card__info">
+                  <p class="card__name">
+                    GT-693
+                  </p>
+
+                  <div class="card__bottom">
+                    <div class="card__rate">
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-light-gray"></i>
+                    </div>
+
+                    <div class="card__actions">
+                      <p class="card__price">1 706 грн.</p>
+
+                      <div class="card__buttons">
+                        <button class="card__button card__button-heart">
+                          <i class="icon-heart"></i>
+                        </button>
+                        <button class="card__button card__button-basket">
+                          <i class="icon-bag"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <span class="card__status">В наявності</span>
+
+                <img src="./img/products/image-1.png" alt="" class="card__img">
+                <div class="card__info">
+                  <p class="card__name">
+                    GT-693
+                  </p>
+
+                  <div class="card__bottom">
+                    <div class="card__rate">
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-light-gray"></i>
+                    </div>
+
+                    <div class="card__actions">
+                      <p class="card__price">1 706 грн.</p>
+
+                      <div class="card__buttons">
+                        <button class="card__button card__button-heart">
+                          <i class="icon-heart"></i>
+                        </button>
+                        <button class="card__button card__button-basket">
+                          <i class="icon-bag"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <span class="card__status">В наявності</span>
+
+                <img src="./img/products/image-1.png" alt="" class="card__img">
+                <div class="card__info">
+                  <p class="card__name">
+                    GT-693
+                  </p>
+
+                  <div class="card__bottom">
+                    <div class="card__rate">
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-light-gray"></i>
+                    </div>
+
+                    <div class="card__actions">
+                      <p class="card__price">1 706 грн.</p>
+
+                      <div class="card__buttons">
+                        <button class="card__button card__button-heart">
+                          <i class="icon-heart"></i>
+                        </button>
+                        <button class="card__button card__button-basket">
+                          <i class="icon-bag"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <span class="card__status">В наявності</span>
+
+                <img src="./img/products/image-1.png" alt="" class="card__img">
+                <div class="card__info">
+                  <p class="card__name">
+                    GT-693
+                  </p>
+
+                  <div class="card__bottom">
+                    <div class="card__rate">
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-light-gray"></i>
+                    </div>
+
+                    <div class="card__actions">
+                      <p class="card__price">1 706 грн.</p>
+
+                      <div class="card__buttons">
+                        <button class="card__button card__button-heart">
+                          <i class="icon-heart"></i>
+                        </button>
+                        <button class="card__button card__button-basket">
+                          <i class="icon-bag"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <span class="card__status">В наявності</span>
+
+                <img src="./img/products/image-1.png" alt="" class="card__img">
+                <div class="card__info">
+                  <p class="card__name">
+                    GT-693
+                  </p>
+
+                  <div class="card__bottom">
+                    <div class="card__rate">
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-light-gray"></i>
+                    </div>
+
+                    <div class="card__actions">
+                      <p class="card__price">1 706 грн.</p>
+
+                      <div class="card__buttons">
+                        <button class="card__button card__button-heart">
+                          <i class="icon-heart"></i>
+                        </button>
+                        <button class="card__button card__button-basket">
+                          <i class="icon-bag"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <span class="card__status">В наявності</span>
+
+                <img src="./img/products/image-1.png" alt="" class="card__img">
+                <div class="card__info">
+                  <p class="card__name">
+                    GT-693
+                  </p>
+
+                  <div class="card__bottom">
+                    <div class="card__rate">
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-light-gray"></i>
+                    </div>
+
+                    <div class="card__actions">
+                      <p class="card__price">1 706 грн.</p>
+
+                      <div class="card__buttons">
+                        <button class="card__button card__button-heart">
+                          <i class="icon-heart"></i>
+                        </button>
+                        <button class="card__button card__button-basket">
+                          <i class="icon-bag"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <span class="card__status">В наявності</span>
+
+                <img src="./img/products/image-1.png" alt="" class="card__img">
+                <div class="card__info">
+                  <p class="card__name">
+                    GT-693
+                  </p>
+
+                  <div class="card__bottom">
+                    <div class="card__rate">
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-orange"></i>
+                      <i class="icon-star text-light-gray"></i>
+                    </div>
+
+                    <div class="card__actions">
+                      <p class="card__price">1 706 грн.</p>
+
+                      <div class="card__buttons">
+                        <button class="card__button card__button-heart">
+                          <i class="icon-heart"></i>
+                        </button>
+                        <button class="card__button card__button-basket">
+                          <i class="icon-bag"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="categories__pagination">
+              <button class="categories__pagination-arrow left">
+                <i class="icon-arrow-left"></i>
+              </button>
+
+              <div class="categories__pagination-pages">
+                <button class="categories__pagination-page active">1</button>
+                <button class="categories__pagination-page">2</button>
+                <button class="categories__pagination-page">3</button>
+                <button class="categories__pagination-page">4</button>
+                <div class="categories__pagination-divide"><i class="icon-dots"></i></div>
+                <button class="categories__pagination-page">156</button>
+              </div>
+
+              <button class="categories__pagination-arrow right">
+                <i class="icon-arrow-right"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
