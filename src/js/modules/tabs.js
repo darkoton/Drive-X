@@ -1,6 +1,6 @@
 let tabs = () => {
-  let nav = document.querySelectorAll('.main__tab'),
-    result = document.querySelectorAll('.main__tab-result'),
+  let nav = document.querySelectorAll('.tab'),
+    result = document.querySelectorAll('.tab-block'),
     tabName
 
   nav.forEach(item => {
@@ -17,6 +17,7 @@ let tabs = () => {
   }
 
   function selectresult(tabName) {
+    console.log(result)
     result.forEach(item => {
       item.classList.contains(tabName) ? item.classList.add('_active') : item.classList.remove('_active')
     })

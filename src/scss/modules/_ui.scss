@@ -360,6 +360,11 @@
     --bg-hover: var(--orange-hover);
     --text: var(--white);
   }
+  &.orange-2 {
+    --bg: var(--orange-2);
+    --bg-hover: var(--orange-2-hover);
+    --text: var(--white);
+  }
 
   @media (any-hover: hover) {
     cursor: pointer;

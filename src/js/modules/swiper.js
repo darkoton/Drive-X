@@ -65,14 +65,12 @@ const productCardGalleryThumb = document.querySelector('.product-card__slider-th
 let productCardGalleryThumbSlider;
 if (productCardGalleryThumb) {
   productCardGalleryThumbSlider = new Swiper(productCardGalleryThumb, {
-    loop: true,
     spaceBetween: 10,
     slidesPerView: 4,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.product-card__slider-thumb-next',
+      prevEl: '.product-card__slider-thumb-prev',
     },
-    freeMode: true,
     watchSlidesProgress: true,
   });
 }
@@ -81,7 +79,6 @@ let productCardGallery = document.querySelector('.product-card__slider');
 let productCardGallerySlider;
 if (productCardGallery) {
   productCardGallerySlider = new Swiper(productCardGallery, {
-    loop: true,
     spaceBetween: 30,
     thumbs: {
       swiper: productCardGalleryThumbSlider,
