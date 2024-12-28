@@ -1,7 +1,7 @@
-.order{
+.order {
   margin: 120px 0;
 
-  &__form{
+  &__form {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -12,108 +12,132 @@
     background: var(--white);
   }
 
-  &__info, &__row{
+  &__info,
+  &__row {
     display: flex;
   }
 
-  &__info{
+  &__info {
     gap: 30px;
   }
-  &__row{
+  &__row {
     gap: 40px;
   }
 
-  &__block{
+  &__block {
     display: flex;
     align-items: center;
     gap: 25px;
     width: 100%;
   }
 
-  &__icon{
+  &__icon {
     width: 100%;
     max-width: 54px;
   }
 
-  &__text{
+  &__text {
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
     letter-spacing: -0.01em;
   }
 
-  &__field{
+  &__field {
     width: 100%;
   }
 
-  &__input{
+  &__input {
     font-weight: 600;
     font-size: 20px;
     letter-spacing: -0.01em;
     box-shadow: 0 7px 20px 0 rgba(127, 127, 127, 0.2);
+    border: 1px solid transparent;
     background: var(--white);
     border-radius: 20px;
     padding: 30px;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      box-shadow: 0 7px 30px 0 rgba(245, 119, 2, 0.2);
+      border-color: var(--orange-2);
+    }
+
+    &:valid {
+      box-shadow: 0 7px 20px 0 rgba(127, 127, 127, 0.2);
+      border-color: var(--light-gray);
+    }
+
+    &:focus {
+      box-shadow: 0 7px 30px 0 rgba(245, 119, 2, 0.2);
+      border-color: var(--orange-2);
+    }
+
+    // &:invalid {
+    //   box-shadow: 0 7px 20px 0 rgba(127, 127, 127, 0.2);
+    //   border-color: var(--red);
+    // }
   }
 
-  &__button{
+  &__button {
     max-width: 350px;
   }
-  @media(max-width: 1300px){
-    &__form{
+  @media (max-width: 1300px) {
+    &__form {
       padding: 50px 60px;
     }
-
   }
-  @media(max-width: 1180px){
-    &__form{
+  @media (max-width: 1180px) {
+    &__form {
       padding: 50px 60px;
     }
-    &__info, &__row{
+    &__info,
+    &__row {
       flex-direction: column;
     }
-    &__info{
-      gap:35px;
+    &__info {
+      gap: 35px;
     }
-    &__row{
+    &__row {
       gap: 30px;
     }
-    &__button{
+    &__button {
       max-width: 100%;
     }
   }
-  @media(max-width: 992px){
+  @media (max-width: 992px) {
     margin: 80px 0;
 
-    &__form{
+    &__form {
       padding: 50px;
       gap: 35px;
     }
   }
 
-  @media(max-width: 680px){
+  @media (max-width: 680px) {
     margin: 40px 0;
 
-    &__info{
+    &__info {
       gap: 13px;
     }
-    &__row{
+    &__row {
       gap: 20px;
     }
-    &__icon{
+    &__icon {
       max-width: 25px;
     }
-    &__form{
+    &__form {
       gap: 20px;
       padding: 20px;
     }
-    &__text, &__input{
+    &__text,
+    &__input {
       font-weight: 500;
       font-size: 10px;
       line-height: 12px;
       letter-spacing: -0.01em;
     }
-    &__input{
+    &__input {
       padding: 11px;
       padding-bottom: 16px;
       border-radius: 10px;

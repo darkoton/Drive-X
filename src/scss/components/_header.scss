@@ -105,6 +105,16 @@
         color: var(--orange-2);
       }
     }
+
+    &.text-orange-2 {
+      @media (any-hover: hover) {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          color: var(--orange-2-hover);
+        }
+      }
+    }
   }
 
   @media (max-width: 1400px) {

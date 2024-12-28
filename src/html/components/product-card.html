@@ -2,15 +2,24 @@
   <div class='product-card__wrapper'>
     <div class='product-card__container _container'>
       <div class='product-card__body'>
-        <div class="product-card__left">
-
-          <div class="product-card__gallery">
-            <button class="product-card__video">
+        <div class="product-card__gallery-container">
+          <div class="product-card__gallery tabs">
+            <button class="product-card__switch tab" data-tab-name="video">
               <i class="icon-play"></i>
               <span>VIDEO</span>
             </button>
 
-            <div class="swiper product-card__slider">
+            <button class="product-card__switch tab _active" data-tab-name="gallery">
+              <i class="icon-image"></i>
+              <span>PHOTO</span>
+            </button>
+
+            <div class="product-card__video tab-block video">
+              <video src="" alt="video"></video>
+              <i class="icon-play"></i>
+            </div>
+
+            <div class="swiper product-card__slider _active tab-block gallery">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <img src="./img/products/image-big.png" />
@@ -32,7 +41,7 @@
                 </div>
               </div>
             </div>
-            <div class="product-card__slider-thumb-body">
+            <div class="product-card__slider-thumb-body _active tab-block gallery">
               <button class="product-card__slider-thumb-button product-card__slider-thumb-prev">
                 <i class="icon-arrow-left"></i>
               </button>
@@ -65,11 +74,9 @@
               </button>
             </div>
           </div>
-
-
         </div>
-        <div class="product-card__right">
-          <div class="product-card__info">
+        <div class="product-card__info">
+          <div class="product-card__info-text">
             <h1 class="product-card__title h1-title">GT-693</h1>
             <div class="product-card__code sub-text">
               <i class="icon-copy"></i>
@@ -89,195 +96,238 @@
                   1 923 ₴
                 </p>
               </div>
-            <div class="product-card__row">
-              <p class="product-card__price h1-title">
-                1 706 ₴
-              </p>
+              <div class="product-card__row">
+                <p class="product-card__price h1-title">
+                  1 706 ₴
+                </p>
 
-              <button class="product-card__cart button orange-2 main-text-semibold">
-                В КОШИК
-                <i class="icon-bag"></i>
-              </button>
-              <button class="product-card__button button orange-2 outlined">
-                <i class="icon-heart"></i>
-              </button>
-              <button class="product-card__button button orange-2 outlined">
-                <i class="icon-comparison"></i>
-              </button>
+                <button class="product-card__cart button fill orange-2 main-text-semibold">
+                  В КОШИК
+                  <i class="icon-bag"></i>
+                </button>
+                <button class="product-card__button button orange-2 outlined">
+                  <i class="icon-heart"></i>
+                </button>
+                <button class="product-card__button button orange-2 outlined">
+                  <i class="icon-comparison"></i>
+                </button>
 
-            <div>
-          </div>
-        </div>
-      </div>
-      </div>
-
-                <div class="product-card__tabs">
-                  <div class="product-card__tabs-nav">
-                    <button class="product-card__tab main-text-semibold tab" data-tab-name="desc">Опис</button>
-                    <button class="product-card__tab main-text-semibold _active tab" data-tab-name="stats">Характеристики</button>
-                    <button class="product-card__tab main-text-semibold tab" data-tab-name="review">Відгуки</button>
-                  </div>
-                <div class="product-card__tabs-blocks">
-                  <div class="product-card__tabs-block product-card__stats tab-block desc">
-                    <ul class="product-card__stats-list">
-
-                      <li class="main-text">
-                        <span class="font-semibold">Типорозмір:</span>
-                        6x9" (152x229мм) 3-смугова акустична система
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Потужність1:</span>
-                        180 Вт
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Частота2:</span>
-                        45-20kHz
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Чутливість:</span>
-                        90 дБ/Вт/М
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Опір:</span>
-                       4 Ом
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Магніт:</span>
-                       10 унцій (477г)
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Звукова котушка:</span>
-                        25 мм
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Низькочастотний дифузор:</span>
-                         поліпропілен
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Середньочастотний дифузор і твітер:</span>
-                       58-міліметровий майларовий дифузор і 30-мм майларовий дифузор.
-                      </li>
-
-                    </ul>
-
-                    <button class="product-card__read main-text-semibold">Читати далі...</button>
-                  </div>
-
-                  <div class="product-card__tabs-block product-card__stats _active tab-block stats">
-                    <ul class="product-card__stats-list">
-
-                      <li class="main-text">
-                        <span class="font-semibold">Типорозмір:</span>
-                        6x9" (152x229мм) 3-смугова акустична система
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Потужність:</span>
-                        180 Вт
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Частота:</span>
-                        45-20kHz
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Чутливість:</span>
-                        90 дБ/Вт/М
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Опір:</span>
-                       4 Ом
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Магніт:</span>
-                       10 унцій (477г)
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Звукова котушка:</span>
-                        25 мм
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Низькочастотний дифузор:</span>
-                         поліпропілен
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Середньочастотний дифузор і твітер:</span>
-                       58-міліметровий майларовий дифузор і 30-мм майларовий дифузор.
-                      </li>
-
-                    </ul>
-
-                    <button class="product-card__read main-text-semibold">Читати далі...</button>
-                  </div>
-
-                  <div class="product-card__tabs-block product-card__stats tab-block review">
-                    <ul class="product-card__stats-list">
-
-                      <li class="main-text">
-                        <span class="font-semibold">Типорозмір3:</span>
-                        6x9" (152x229мм) 3-смугова акустична система
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Потужність3:</span>
-                        180 Вт
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Частота:</span>
-                        45-20kHz
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Чутливість:</span>
-                        90 дБ/Вт/М
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Опір:</span>
-                       4 Ом
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Магніт:</span>
-                       10 унцій (477г)
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Звукова котушка:</span>
-                        25 мм
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Низькочастотний дифузор:</span>
-                         поліпропілен
-                      </li>
-
-                      <li class="main-text">
-                        <span class="font-semibold">Середньочастотний дифузор і твітер:</span>
-                       58-міліметровий майларовий дифузор і 30-мм майларовий дифузор.
-                      </li>
-
-                    </ul>
-
-                    <button class="product-card__read main-text-semibold">Читати далі...</button>
-                  </div>
+                <div>
                 </div>
               </div>
-    </div>
-  </div>
+            </div>
+          </div>
+
+          <div class="product-card__tabs tabs">
+            <div class="product-card__tabs-nav">
+              <button class="product-card__tab main-text-semibold tab" data-tab-name="desc">Опис</button>
+              <button class="product-card__tab main-text-semibold _active tab"
+                data-tab-name="stats">Характеристики</button>
+              <button class="product-card__tab main-text-semibold tab" data-tab-name="review">Відгуки</button>
+            </div>
+            <div class="product-card__tabs-blocks">
+              <div class="product-card__tabs-block product-card__stats tab-block desc">
+                <ul class="product-card__stats-list">
+
+                  <li class="main-text">
+                    <span class="font-semibold">Типорозмір:</span>
+                    6x9" (152x229мм) 3-смугова акустична система
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Потужність1:</span>
+                    180 Вт
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Частота2:</span>
+                    45-20kHz
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Чутливість:</span>
+                    90 дБ/Вт/М
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Опір:</span>
+                    4 Ом
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Магніт:</span>
+                    10 унцій (477г)
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Звукова котушка:</span>
+                    25 мм
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Низькочастотний дифузор:</span>
+                    поліпропілен
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Середньочастотний дифузор і твітер:</span>
+                    58-міліметровий майларовий дифузор і 30-мм майларовий дифузор.
+                  </li>
+
+                </ul>
+
+                <button class="product-card__read main-text-semibold">Читати далі...</button>
+              </div>
+
+              <div class="product-card__tabs-block product-card__stats _active tab-block stats">
+                <ul class="product-card__stats-list">
+
+                  <li class="main-text">
+                    <span class="font-semibold">Типорозмір:</span>
+                    6x9" (152x229мм) 3-смугова акустична система
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Потужність:</span>
+                    180 Вт
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Частота:</span>
+                    45-20kHz
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Чутливість:</span>
+                    90 дБ/Вт/М
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Опір:</span>
+                    4 Ом
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Магніт:</span>
+                    10 унцій (477г)
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Звукова котушка:</span>
+                    25 мм
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Низькочастотний дифузор:</span>
+                    поліпропілен
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Середньочастотний дифузор і твітер:</span>
+                    58-міліметровий майларовий дифузор і 30-мм майларовий дифузор.
+                  </li>
+
+                </ul>
+
+                <button class="product-card__read main-text-semibold">Читати далі...</button>
+              </div>
+
+              <div class="product-card__tabs-block product-card__stats tab-block review">
+                <ul class="product-card__stats-list">
+
+                  <li class="main-text">
+                    <span class="font-semibold">Типорозмір3:</span>
+                    6x9" (152x229мм) 3-смугова акустична система
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Потужність3:</span>
+                    180 Вт
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Частота:</span>
+                    45-20kHz
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Чутливість:</span>
+                    90 дБ/Вт/М
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Опір:</span>
+                    4 Ом
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Магніт:</span>
+                    10 унцій (477г)
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Звукова котушка:</span>
+                    25 мм
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Низькочастотний дифузор:</span>
+                    поліпропілен
+                  </li>
+
+                  <li class="main-text">
+                    <span class="font-semibold">Середньочастотний дифузор і твітер:</span>
+                    58-міліметровий майларовий дифузор і 30-мм майларовий дифузор.
+                  </li>
+
+                </ul>
+
+                <button class="product-card__read main-text-semibold">Читати далі...</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="product-card__about-select">
+
+          <div class="product-card__about-select-container">
+            <h2 class="product-card__about-select-title h1-title">Чому обирають нас</h2>
+            <ul class="product-card__about-select-list">
+              <li>
+                <div class="product-card__about-select-icon">
+                  <i class="icon-check-mark"></i>
+                </div>
+
+                <p class="main-text">Ми пропонуємо вам продукцію найвищої якості, безпеку та комфорт під час водіння.
+                </p>
+              </li>
+
+              <li>
+                <div class="product-card__about-select-icon">
+                  <i class="icon-check-mark"></i>
+                </div>
+
+                <p class="main-text">Завдяки сучасним технологіям та ретельному тестуванню, наші товари надійні та
+                  довговічні. </p>
+              </li>
+
+              <li>
+                <div class="product-card__about-select-icon">
+                  <i class="icon-check-mark"></i>
+                </div>
+
+                <p class="main-text">Обираючи нас, ви отримуєте інноваційну продукцію та першокласне обслуговування.</p>
+              </li>
+
+              <li>
+                <p class="main-text">Дякуємо, що обираєте <span class="text-red">DriveX</span>!</p>
+              </li>
+
+
+            </ul>
+          </div>
+          <img src="./img/products/car.png" alt="" class="product-card__about-select-car">
+        </div>
+      </div>
 </section>

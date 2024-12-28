@@ -1,27 +1,33 @@
 let tabs = () => {
   let nav = document.querySelectorAll('.tab'),
     result = document.querySelectorAll('.tab-block'),
-    tabName
+    tabName;
 
   nav.forEach(item => {
-    item.addEventListener('click', selectnav)
-  })
+    item.addEventListener('click', selectnav);
+  });
 
   function selectnav() {
-    nav.forEach(item => {
+    const parent = this.closest('.tabs');
+    if (!parent) {
+      return;
+    }
+
+    const currentNav = parent.querySelectorAll('.tab');
+    currentNav.forEach(item => {
       item.classList.remove('_active');
     });
-    this.classList.add('_active')
-    tabName = this.getAttribute('data-tab-name')
-    selectresult(tabName)
+    this.classList.add('_active');
+    tabName = this.getAttribute('data-tab-name');
+    selectresult(tabName, parent);
   }
 
-  function selectresult(tabName) {
-    console.log(result)
-    result.forEach(item => {
-      item.classList.contains(tabName) ? item.classList.add('_active') : item.classList.remove('_active')
-    })
+  function selectresult(tabName, parent) {
+    const blocks = parent.querySelectorAll('.tab-block');
+    blocks.forEach(item => {
+      item.classList.contains(tabName) ? item.classList.add('_active') : item.classList.remove('_active');
+    });
   }
-}
+};
 
-tabs()
+tabs();
