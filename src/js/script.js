@@ -15,7 +15,7 @@ import './modules/swiper.js'; // SLIDER SWIPER
 
 // import "./modules/animate_scroll.js"  // ANIMATE WITH SCROLL
 
-import "./modules/tabs.js"  // TABS
+import './modules/tabs.js'; // TABS
 
 // import "./modules/parallax.js"  // PARALLAX EFFECT
 
@@ -69,3 +69,21 @@ filters.forEach(filter => {
     });
   }
 });
+
+// Outside container block
+const block = document.querySelector('.product-card__about-select');
+function setMargin() {
+  const padding = (window.innerWidth - 1440) / 2;
+
+  if (padding <= 0) {
+    block.style.marginLeft = '0px';
+  } else if (padding >= 220) {
+    block.style.marginLeft = '-220px';
+  } else if (padding < 220 && padding > 0) {
+    block.style.marginLeft = '-' + padding + 'px';
+  }
+}
+if (block) {
+  setMargin();
+  window.addEventListener('resize', setMargin);
+}
