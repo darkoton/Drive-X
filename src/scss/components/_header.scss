@@ -50,11 +50,35 @@
   }
 
   &__catalog {
-    gap: 10px;
+    position: relative;
 
-    i {
-      color: var(--red);
-      --size: 35px;
+    & .header__button {
+      gap: 10px;
+
+      i {
+        color: var(--red);
+        --size: 35px;
+      }
+    }
+
+    & .catalog-menu {
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+      min-width: 350px;
+      text-align: left;
+      opacity: 0;
+      pointer-events: none;
+      & * {
+        font-weight: 600;
+      }
+
+      &.active {
+        opacity: 1;
+        pointer-events: all;
+      }
     }
   }
 

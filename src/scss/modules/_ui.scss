@@ -784,3 +784,134 @@
     // border: 1px solid #3264fe;
   }
 }
+
+.catalog-menu {
+  width: 100%;
+  max-width: 31%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+  border-radius: 20px;
+  box-shadow: 0 7px 20px 0 rgba(127, 127, 127, 0.2);
+  background-color: var(--white);
+  padding: 25px 24px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__link,
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease 0s;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+
+    br {
+      display: none;
+    }
+
+    i {
+      color: var(--gray);
+      transition: all 0.3s ease 0s;
+
+      &.catalog-menu__element {
+        --size: 35px;
+      }
+      &.catalog-menu__arrow {
+        --size: 20px;
+      }
+    }
+
+    & .catalog-menu__arrow {
+      margin-right: -4px;
+    }
+
+    @media (any-hover: hover) {
+      cursor: pointer;
+      &:hover i,
+      &:hover {
+        color: var(--orange-2);
+      }
+    }
+
+    &:active,
+    &:active i {
+      color: var(--red);
+    }
+  }
+
+  &__button {
+    background: transparent;
+    text-align: left;
+  }
+
+  &__list {
+    position: relative;
+
+    &:hover,
+    &.spoller {
+      & .catalog-menu__child-list {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+
+    &.spoller {
+      & .catalog-menu__child-list {
+        position: static;
+        box-shadow: none;
+      }
+    }
+
+    @media (max-width: 992px) {
+      display: flex;
+      flex-direction: row;
+      white-space: nowrap;
+    }
+  }
+
+  &__child-list {
+    position: absolute;
+    left: calc(100% + 5px);
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+
+    @media (max-width: 992px) {
+      position: static;
+      flex-direction: row;
+      opacity: 1;
+      pointer-events: all;
+      box-shadow: none;
+      align-items: center;
+      white-space: nowrap;
+      row-gap: 10px;
+    }
+
+    & a {
+      @extend .main-text;
+
+      @media (any-hover: hover) {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          color: var(--orange-2);
+        }
+      }
+    }
+  }
+}

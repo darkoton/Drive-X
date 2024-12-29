@@ -27,8 +27,10 @@ let cssContent = `/* Автоматически сгенерированные �
 [class^="icon-"] {
   display: inline-block;
   --size: 24px;
-  width: var(--size);
-  height: var(--size);
+  min-width: var(--size);
+  min-height: var(--size);
+  max-width: var(--size);
+  max-height: var(--size);
   --svg: none;
   background-color: currentColor;
   -webkit-mask-image: var(--svg);

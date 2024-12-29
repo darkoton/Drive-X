@@ -87,3 +87,21 @@ if (block) {
   setMargin();
   window.addEventListener('resize', setMargin);
 }
+
+// Header catalog
+
+const headerCatalogOpen = document.querySelector('.header__catalog > .header__button');
+const headerCatalog = document.querySelector('.header__catalog > .catalog-menu');
+if (headerCatalogOpen) {
+  headerCatalogOpen.addEventListener('click', () => {
+    headerCatalog.classList.toggle('active');
+  });
+}
+
+// Delegation
+
+window.addEventListener('click', ({ target }) => {
+  if (!target.closest('.header__catalog') && headerCatalog) {
+    headerCatalog.classList.remove('active');
+  }
+});

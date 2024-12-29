@@ -39,6 +39,10 @@ a {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+
+  @media (max-width: 992px) {
+    padding-bottom: 53px;
+  }
 }
 
 //< " GRID " >=============================================================================================================>//
@@ -77,6 +81,7 @@ a {
 @import "./components/_categories";
 @import "./components/_product-card";
 @import "./components/_feed";
+@import "./components/_menu";
 
 //< " MAIN BLOCK " >=============================================================================================================>//
 .page {
