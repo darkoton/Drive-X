@@ -44,7 +44,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 69% 27%;
-    grid-template-rows: 274px 274px;
+    grid-template-rows: 1fr 1fr;
     // flex: 1 1 auto;
     grid-template-areas:
       "big1 small2"
@@ -55,7 +55,7 @@
     justify-content: space-between;
 
     @media (max-width: 992px) {
-      grid-template-rows: 226px 226px;
+      grid-template-rows: 1fr 1fr;
       padding: 0 15px;
       gap: 11px;
     }
@@ -67,6 +67,7 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 224px 140px;
       row-gap: 10px;
+      align-content: stretch;
     }
   }
   &__banner-1 {
@@ -142,6 +143,8 @@
         right: 23px;
         top: 23px;
         z-index: -1;
+        width: 100%;
+        @include adaptiv-value(max-width, 282, 109, 1);
 
         @media (max-width: 992px) {
           right: 19px;

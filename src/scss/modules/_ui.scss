@@ -809,6 +809,7 @@
     font-weight: 500;
     font-size: 20px;
     letter-spacing: -0.01em;
+    padding-right: 15px;
 
     br {
       display: none;
@@ -876,7 +877,7 @@
 
   &__child-list {
     position: absolute;
-    left: calc(100% + 5px);
+    left: 100%;
     top: 0;
     width: 100%;
     padding: 10px;
